@@ -1,0 +1,46 @@
+nav{
+  border-top: 1px solid black;
+  width: 87%;
+  margin: 20px 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+
+#star{
+  font-size:1.5em;
+}
+
+#bag{
+  font-size:1.5em;
+  position: relative;
+  cursor: pointer;
+}
+
+.NavIcons{
+  width: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  color: #000000;
+  padding: 4px 10px 4px 10px;
+  border-radius: 4px;
+  display: none;
+  width: 300px;
+  right: -41px;
+  top: 50px;
+  position: absolute;
+} 
+
+.fas.fa-shopping-bag.clicked .info {
+  display: block;
+}
+

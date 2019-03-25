@@ -1,0 +1,35 @@
+.ActivitiesButton {
+  width: 100%;
+  border: 1px solid #dddddd;
+  border-radius: 24px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+}
+
+.ActivitiesButton:hover {
+  background-color: #666666 !important;
+  color: #ffffff;
+}
+
+.ActivitiesButton.clicked {
+  background-color: #dddddd;
+}
+
+.info {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  color: #000000;
+  padding: 4px 10px 4px 10px;
+  border-radius: 4px;
+  display: none;
+  width: 100%;
+  top: 50px;
+  position: absolute;
+} 
+
+.ActivitiesButton.clicked .info {
+  display: block;
+}

@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+// import ShoppingList from '../Navbar/components/ShoppingList'
+
+import ActivitiesButton from './components/ActivitiesButton';
 
 class Activities extends Component {
 
@@ -11,7 +14,6 @@ class Activities extends Component {
   componentDidMount() {
     axios.get('https://api.musement.com/api/v3/venues/164/activities?limit=6&offset=1')
       .then(({ data }) => {
-        console.log(data);
         this.setState({
           activities: data,
           status: 'isLoaded',
@@ -31,8 +33,11 @@ class Activities extends Component {
         <div class="card-container">
         <img src={activity.cover_image_url} alt="image"/> 
         <h3 key={activity.title}>{activity.title}</h3>
-        <p key={activity.descprition}>{activity.description}</p>
-        <button>Add to card</button>
+        <p key={activity.description}>{activity.description}</p>
+        <p key={activity.retail_price.formatted_value}> {activity.retail_price.formatted_value}</p>
+        <ActivitiesButton
+          // onClick={() => console.log('hola')}
+        />
         </div>
       ))
     )
